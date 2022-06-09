@@ -17,7 +17,7 @@ services:
     volumes:
       - ./nginx2.http.config:/etc/nginx/nginx.conf
       #- ./assets/nginx/certs:/etc/nginx/certs
-      - static_volume:/app/static
+      - static_volume:/app2/static
     ports:
       # - "443:443"
       - "100:100"
