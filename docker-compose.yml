@@ -12,8 +12,8 @@ services:
     volumes:
       - static_volume:/app2/static
     
-   nginx:
-    image: nginx:latest
+   nginx2:
+    image: nginx2:latest
     volumes:
       - ./nginx2.http.config:/etc/nginx/nginx2.conf
       #- ./assets/nginx/certs:/etc/nginx/certs
