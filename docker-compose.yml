@@ -15,7 +15,7 @@ services:
    nginx:
     image: nginx:latest
     volumes:
-      - ./nginx2.http.config:/etc/nginx/nginx2.conf
+      - ./nginx2.http.config:/etc/nginx/nginx.conf
       #- ./assets/nginx/certs:/etc/nginx/certs
       - static_volume:/app2/static
     ports:
