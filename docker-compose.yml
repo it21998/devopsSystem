@@ -26,3 +26,5 @@ services:
     restart:
       on-failure:5
 
+volumes:
+  static_volume:
