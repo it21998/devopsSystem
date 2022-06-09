@@ -27,5 +27,4 @@ services:
       on-failure:5
 
 volumes:
-  dj_postgres_data:
-  static_volume:
+static_volume:
