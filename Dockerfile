@@ -2,7 +2,7 @@
 FROM python:3.9-buster
 
 #Change working directory
-WORKDIR /app
+WORKDIR /app2
 
 # COPY requirements.txt
 COPY ./requirements.txt ./
