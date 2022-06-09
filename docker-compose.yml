@@ -12,7 +12,7 @@ services:
     volumes:
       - static_volume:/app/static
     
-    nginx:
+    nginx2:
     image: nginx:latest
     volumes:
       - ./nginx2.http.config:/etc/nginx/nginx2.conf
