@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+   django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+     - ./student_management/student_management/.env
+    ports:
+      - "9000:9000"
+    volumes:
+      - static_volume:/app/static
+    
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx2.http.config:/etc/nginx/nginx.conf
+      #- ./assets/nginx/certs:/etc/nginx/certs
+      - static_volume:/app/static
+    ports:
+      # - "443:443"
+      - "100:100"
+    depends_on:
+      - django
+    restart:
+      on-failure:5
+
+volumes:
+  dj_postgres_data:
+  static_volume:
