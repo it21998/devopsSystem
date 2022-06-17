@@ -28,7 +28,7 @@ services:
       #- ./assets/nginx/certs:/etc/nginx/certs
       - static_volume:/app2/static
     ports:
-      - "100:100"
+      - "443:443"
     depends_on:
       - django2
     restart:
