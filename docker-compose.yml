@@ -22,7 +22,7 @@ services:
       - static_volume:/app2/static
     
    nginx:
-    image: nginx:latest
+    image: bitnami/nginx
     volumes:
       - ./nginx2.http.config:/etc/nginx/nginx.conf
       #- ./assets/nginx/certs:/etc/nginx/certs
