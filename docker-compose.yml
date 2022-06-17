@@ -17,7 +17,7 @@ services:
     env_file:
      - ./student_management/student_management/.env
     ports:
-      - "9000:9000"
+      - "8000:8000"
     volumes:
       - static_volume:/app2/static
    nginx:
