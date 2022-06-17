@@ -23,14 +23,14 @@ services:
    nginx:
     image: nginx:latest
     volumes:
-      - ./nginx.http.config:/etc/nginx/nginx.conf
+      - ./nginx2.http.config:/etc/nginx/nginx.conf
       #- ./assets/nginx/certs:/etc/nginx/certs
-      - static_volume:/app/static
+      - static_volume:/app2/static
     ports:
       # - "443:443"
-      - "80:80"
+      - "443:443"
     depends_on:
-      - django
+      - django2
     restart:
       on-failure:5
 volumes:
