@@ -24,7 +24,7 @@ services:
    nginx:
     image: bitnami/nginx
     volumes:
-      - ./nginx2.http.config:/etc/nginx/nginx.conf
+      - ./nginx2.http.config:/opt/bitnami/nginx/conf/server_blocks/my_server_block.conf:ro
       #- ./assets/nginx/certs:/etc/nginx/certs
       - static_volume:/app2/static
     ports:
