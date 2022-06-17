@@ -23,7 +23,7 @@ from student_management_app import views,StaffViews, StudentViews
 urlpatterns = [
     path('demo',views.showDemoPage),
     path('doLogin',views.doLogin,name="do_login"),
-    path('secondapp',views.ShowLoginPage,name="show_login"),
+    path('/secondapp/',views.ShowLoginPage,name="show_login"),
     path('get_user_details', views.GetUserDetails),
     path('logout_user', views.logout_user,name="logout"),
    
