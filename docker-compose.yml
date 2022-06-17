@@ -20,6 +20,18 @@ services:
       - "9000:9000"
     volumes:
       - static_volume:/app2/static
-
+   nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.http.config:/etc/nginx/nginx.conf
+      #- ./assets/nginx/certs:/etc/nginx/certs
+      - static_volume:/app/static
+    ports:
+      # - "443:443"
+      - "80:80"
+    depends_on:
+      - django
+    restart:
+      on-failure:5
 volumes:
   static_volume:
