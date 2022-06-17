@@ -22,13 +22,13 @@ services:
       - static_volume:/app2/static
     
    nginx:
-    image: bitnami/nginx
+    image: nginx:latest
     volumes:
-      - ./nginx2.http.config:/opt/bitnami/nginx/conf/server_blocks/my_server_block.conf:ro
+      - ./nginx2.http.config:/etc/nginx/nginx.conf
       #- ./assets/nginx/certs:/etc/nginx/certs
       - static_volume:/app2/static
     ports:
-      - "8080:8080"
+      - "443:443"
     depends_on:
       - django2
     restart:
